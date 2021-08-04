@@ -1,4 +1,6 @@
 package restauraunt;
+import restauraunt.Menu;
+import restauraunt.MenuItem;
 
 public class Main {
 
