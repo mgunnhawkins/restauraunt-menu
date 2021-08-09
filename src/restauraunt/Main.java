@@ -6,7 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        MenuItem tiramisu = new MenuItem("dessert", "espresso chocolate goodness destined to fill your tummy and keep" +
+        MenuItem tiramisu = new MenuItem("tiramisu", "dessert", "espresso chocolate goodness destined to fill your " +
+                "tummy and keep" +
                 " you up all night", 6.99, true);
         System.out.println(tiramisu);
         //methods to create:

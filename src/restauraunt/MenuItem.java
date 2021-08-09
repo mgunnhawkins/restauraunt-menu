@@ -1,14 +1,18 @@
 package restauraunt;
+import java.util.Date;
 
 public class MenuItem {
     //fields
+    private String name;
     private Double price;
     private String description;
-    private String category;
+    private String category; //look up enum to create own variable type
     private Boolean newItem = false;
+    private Integer dateCreated = new Date().getDay(); //can use for loop to update
 
     //constructor
-    public MenuItem (String category, String description, Double price, Boolean newItem){
+    public MenuItem (String name, String category, String description, Double price, Boolean newItem){
+        this.name = name;
         this.category = category;
         this.description = description;
         this.price = price;
@@ -16,6 +20,9 @@ public class MenuItem {
     }
 
     //getters and setters
+    public String getName(){ return name;}
+
+    public void setName(String name) { this.name = name; }
 
     public Double getPrice() {
         return price;
