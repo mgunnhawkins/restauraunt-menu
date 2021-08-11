@@ -64,6 +64,8 @@ public class MenuItem {
         return featuredItem;
     }
 
+    //determine whether or not two menu items are equal
+
 
 }
 

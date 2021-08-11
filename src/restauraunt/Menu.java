@@ -8,7 +8,6 @@ import java.util.Formatter;
 public class Menu {
     //fields
     private ArrayList<MenuItem> menuItems = new ArrayList<>();
-    private int lastDayUpdated = new Date().getDay();
     private LocalDate menuLastUpdated;
     private String printedMenu;
 
@@ -21,6 +20,8 @@ public class Menu {
         this.menuItems = menuItems;
     }
 
+
+    // menu was last updated
     public LocalDate getLastUpdated() {
         return menuLastUpdated;
     }
@@ -39,14 +40,17 @@ public class Menu {
         }
 
         menuItems.add(menuItem);
+        menuLastUpdated = LocalDate.now();
     }
 
     public void removeItem(String name){
         for (MenuItem item: menuItems){
             if (item.getName().equals(name)){
-                //TODO:  remove item from menuItems
+                menuItems.remove(item);
                 displayMenu();
                 break;
+            } else {
+                System.out.println("Unable to remove. Menu item does not exist.");
             }
         }
     }
@@ -74,20 +78,8 @@ public class Menu {
     }
 
 }
-        //methods
 
-//remove MenuItem();
-//
 
-        //methods to create:
-        // new Item: if item is x amount of days old then go to false
-        // pulling key and using hashmap (ex: pull all appetizers and print those menu items)
-
-        //Instance methods:
-
-        //determine whether or not two menu items are equal
-        // menu item is new.
-        // menu was last updated.
 
 
 
