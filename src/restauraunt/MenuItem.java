@@ -56,5 +56,14 @@ public class MenuItem {
         this.newItem = newItem;
     }
 
+    public String featuredItem(){
+        String featuredItem = "";
+        if (newItem = true){
+                featuredItem = "*** New Item ***";
+            }
+        return featuredItem;
+    }
+
+
 }
 
