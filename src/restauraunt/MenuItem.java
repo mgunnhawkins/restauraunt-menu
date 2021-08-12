@@ -65,7 +65,20 @@ public class MenuItem {
     }
 
     //determine whether or not two menu items are equal
-
+    @Override
+    public boolean equals(Object otherItem){
+        if(this == otherItem){
+            return true;
+        }
+        if(otherItem == null){
+            return false;
+        }
+        if(this.getClass() != otherItem.getClass()){
+            return false;
+        }
+        MenuItem otherMenuItem = (MenuItem) otherItem;
+        return this.name.equals(otherMenuItem.getName());
+    }
 
 }
 
